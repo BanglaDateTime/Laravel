@@ -1,0 +1,52 @@
+{
+    "name": "bangladatetime/laravel",
+    "description": "A Laravel package to format DateTime to Bangla and support Bangla calendar.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "Laravel",
+        "Bangla",
+        "DateTime",
+        "Bangla Calendar",
+        "Bangladesh",
+        "Date Conversion"
+    ],
+    "authors": [
+        {
+            "name": "Md Rasel Islam",
+            "email": "rtraselbd@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "bangladatetime/php": "^1.0",
+        "illuminate/support": "^8.0||^9.0||^10.0||^11.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.3",
+        "orchestra/testbench": "^9.4",
+        "laravel/pint": "^1.17"
+    },
+    "autoload": {
+        "psr-4": {
+            "BanglaDateTime\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BanglaDateTime\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BanglaDateTime\\Laravel\\BanglaDateTimeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
