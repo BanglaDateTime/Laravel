@@ -10,7 +10,7 @@ class CarbonBanglaDateTimeMacroTest extends TestCase
     public function test_it_can_format_date_in_bangla()
     {
         $date = Carbon::parse('2023-04-13');
-        $formattedDate = $date->toBanglaFormat('l jS F Y');
+        $formattedDate = $date->formatBangla('l jS F Y');
         $this->assertEquals('বৃহস্পতিবার ১৩ই এপ্রিল ২০২৩', $formattedDate);
     }
 

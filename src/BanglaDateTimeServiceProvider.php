@@ -45,7 +45,7 @@ class BanglaDateTimeServiceProvider extends ServiceProvider
      */
     protected function registerMacros()
     {
-        Carbon::macro('toBanglaFormat', function (?string $format = null, ?string $timezone = null) {
+        Carbon::macro('formatBangla', function (?string $format = null, ?string $timezone = null) {
             // Use default format if none is provided
             $format = $format ?? config('bangladatetime.format', 'Y-m-d');
 
@@ -60,7 +60,7 @@ class BanglaDateTimeServiceProvider extends ServiceProvider
         });
 
         Carbon::macro('toBangla', function (?string $format = null, ?string $timezone = null) {
-            // Use default format if none is provided
+            // Use default bangla format if none is provided
             $format = $format ?? config('bangladatetime.bangla_format', 'jS F, Y');
 
             // Use default timezone if none is provided
