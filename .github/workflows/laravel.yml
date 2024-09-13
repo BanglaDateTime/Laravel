@@ -1,0 +1,36 @@
+name: Laravel CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'  # Adjust this if you use a different PHP version
+        coverage: none
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: Run tests
+      run: vendor/bin/phpunit --configuration phpunit.xml --log-junit test-results.xml
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: phpunit-results
+        path: test-results.xml
