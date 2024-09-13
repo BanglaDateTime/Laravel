@@ -49,7 +49,7 @@ use App\Models\User;
 
 // Retrieve a user and format the created_at attribute in Bangla format
 $user = User::find(1);
-echo $user->created_at->toBanglaFormat('l jS F Y h:i:s');
+echo $user->created_at->formatBangla('l jS F Y h:i:s');
 
 // Format the created_at attribute in Bangla calendar format
 echo $user->created_at->toBangla('l jS F Y h:i:s');
@@ -67,7 +67,7 @@ Created at converted to Bangla: বৃহস্পতিবার ২৮শে �
 use Illuminate\Support\Carbon;
 
 // Get current date and time in Bangla format
-echo Carbon::now()->toBanglaFormat('l jS F Y h:i:s');
+echo Carbon::now()->formatBangla('l jS F Y h:i:s');
 
 // Get current date and time in Bangla calendar format
 echo Carbon::now()->toBangla('l jS F Y h:i:s');
@@ -85,7 +85,7 @@ Current time converted to Bangla: বৃহস্পতিবার ২৮শে
 use Illuminate\Support\Carbon;
 
 // Set a custom date ('2023-04-13') in Bangla format
-echo Carbon::create('2023-04-13')->toBanglaFormat('l jS F Y h:i:s');
+echo Carbon::create('2023-04-13')->formatBangla('l jS F Y h:i:s');
 
 // Set a custom date ('2023-04-13') in Bangla calendar format
 echo Carbon::create('2023-04-13')->toBangla('l jS F Y h:i:s');
@@ -103,7 +103,7 @@ Set Time & converted to Bangla: বৃহস্পতিবার ৩০শে �
 use Illuminate\Support\Carbon;
 
 // Set current time with a specific timezone ('Asia/Dhaka') in Bangla format
-echo Carbon::now('Asia/Dhaka')->toBanglaFormat('l jS F Y h:i:s');
+echo Carbon::now('Asia/Dhaka')->formatBangla('l jS F Y h:i:s');
 
 // Set current time with a specific timezone ('Asia/Dhaka') in Bangla calendar format
 echo Carbon::now('Asia/Dhaka')->toBangla('l jS F Y h:i:s');
@@ -117,13 +117,13 @@ Set Time & Time Zone & converted to Bangla: বৃহস্পতিবার �
 
 ### Custom Format and Timezone
 
-You can specify a custom format and timezone when calling `toBanglaFormat` and `toBangla` methods:
+You can specify a custom format and timezone when calling `formatBangla` and `toBangla` methods:
 
 ```php
 use Illuminate\Support\Carbon;
 
 // Get current date and time in Bangla format with a custom format and timezone
-echo Carbon::now()->toBanglaFormat('d/m/Y H:i:s', 'Asia/Dhaka');
+echo Carbon::now()->formatBangla('d/m/Y H:i:s', 'Asia/Dhaka');
 
 // Get current date and time in Bangla calendar format with a custom format and timezone
 echo Carbon::now()->toBangla('d/m/Y H:i:s', 'Asia/Dhaka');
