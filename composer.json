@@ -23,8 +23,8 @@
         "illuminate/support": "^8.0||^9.0||^10.0||^11.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.3",
-        "orchestra/testbench": "^9.4",
+        "phpunit/phpunit": "^9.6||^10.5||^11.3",
+        "orchestra/testbench": "^6.46||^7.45||^8.26||^9.4",
         "laravel/pint": "^1.17"
     },
     "autoload": {
