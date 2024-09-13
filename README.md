@@ -150,12 +150,11 @@ Formats the date and time using a specified format, with the output in the Bangl
 
 - **`$format`**: The format string (same as PHP's `DateTime::format`).
 
-### `toBangla($format, $timezone = null)`
+### `toBangla($format)`
 
 Converts and formats the date and time into the Bangla calendar and Bangla numbers.
 
 - **`$format`**: The format string (same as PHP's `DateTime::format`).
-- **`$timezone`**: The timezone to use (optional).
 
 ## Helper Functions
 
