@@ -1,4 +1,4 @@
-name: Laravel CI
+name: tests
 
 on:
   push:
@@ -27,10 +27,4 @@ jobs:
       run: composer install
 
     - name: Run tests
-      run: vendor/bin/phpunit --configuration phpunit.xml --log-junit test-results.xml
-
-    - name: Upload test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: phpunit-results
-        path: test-results.xml
+      run: composer test
